@@ -55,45 +55,45 @@ export function AssetForm({ open, onClose }: AssetFormProps) {
     <Dialog open={open} onClose={onClose} title="新增知识资产">
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="mb-1.5 block text-xs font-medium text-zinc-400">标题 *</label>
+          <label className="mb-1.5 block text-xs font-medium text-zinc-500">标题 *</label>
           <input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="输入资产标题"
-            className="w-full rounded-lg border border-zinc-700/50 bg-zinc-800/50 px-3 py-2 text-sm text-zinc-200 placeholder-zinc-600 outline-none transition-colors focus:border-amber-500/40"
+            className="w-full rounded-lg border border-zinc-200/50 bg-zinc-50/50 px-3 py-2 text-sm text-zinc-800 placeholder-zinc-400 outline-none transition-colors focus:border-sky-400/40"
             required
           />
         </div>
 
         <div>
-          <label className="mb-1.5 block text-xs font-medium text-zinc-400">内容 *</label>
+          <label className="mb-1.5 block text-xs font-medium text-zinc-500">内容 *</label>
           <textarea
             value={content}
             onChange={(e) => setContent(e.target.value)}
             placeholder="输入资产内容"
             rows={5}
-            className="w-full resize-none rounded-lg border border-zinc-700/50 bg-zinc-800/50 px-3 py-2 text-sm text-zinc-200 placeholder-zinc-600 outline-none transition-colors focus:border-amber-500/40"
+            className="w-full resize-none rounded-lg border border-zinc-200/50 bg-zinc-50/50 px-3 py-2 text-sm text-zinc-800 placeholder-zinc-400 outline-none transition-colors focus:border-sky-400/40"
             required
           />
         </div>
 
         <div>
-          <label className="mb-1.5 block text-xs font-medium text-zinc-400">摘要</label>
+          <label className="mb-1.5 block text-xs font-medium text-zinc-500">摘要</label>
           <input
             value={summary}
             onChange={(e) => setSummary(e.target.value)}
             placeholder="简短描述（可选，默认截取内容前100字）"
-            className="w-full rounded-lg border border-zinc-700/50 bg-zinc-800/50 px-3 py-2 text-sm text-zinc-200 placeholder-zinc-600 outline-none transition-colors focus:border-amber-500/40"
+            className="w-full rounded-lg border border-zinc-200/50 bg-zinc-50/50 px-3 py-2 text-sm text-zinc-800 placeholder-zinc-400 outline-none transition-colors focus:border-sky-400/40"
           />
         </div>
 
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <label className="mb-1.5 block text-xs font-medium text-zinc-400">类型</label>
+            <label className="mb-1.5 block text-xs font-medium text-zinc-500">类型</label>
             <select
               value={type}
               onChange={(e) => setType(e.target.value as AssetType)}
-              className="w-full rounded-lg border border-zinc-700/50 bg-zinc-800/50 px-3 py-2 text-sm text-zinc-200 outline-none transition-colors focus:border-amber-500/40"
+              className="w-full rounded-lg border border-zinc-200/50 bg-zinc-50/50 px-3 py-2 text-sm text-zinc-800 outline-none transition-colors focus:border-sky-400/40"
             >
               {typeOptions.map((opt) => (
                 <option key={opt.value} value={opt.value}>
@@ -104,23 +104,23 @@ export function AssetForm({ open, onClose }: AssetFormProps) {
           </div>
 
           <div>
-            <label className="mb-1.5 block text-xs font-medium text-zinc-400">来源</label>
+            <label className="mb-1.5 block text-xs font-medium text-zinc-500">来源</label>
             <input
               value={source}
               onChange={(e) => setSource(e.target.value)}
               placeholder="数据来源"
-              className="w-full rounded-lg border border-zinc-700/50 bg-zinc-800/50 px-3 py-2 text-sm text-zinc-200 placeholder-zinc-600 outline-none transition-colors focus:border-amber-500/40"
+              className="w-full rounded-lg border border-zinc-200/50 bg-zinc-50/50 px-3 py-2 text-sm text-zinc-800 placeholder-zinc-400 outline-none transition-colors focus:border-sky-400/40"
             />
           </div>
         </div>
 
         <div>
-          <label className="mb-1.5 block text-xs font-medium text-zinc-400">标签</label>
+          <label className="mb-1.5 block text-xs font-medium text-zinc-500">标签</label>
           <input
             value={tags}
             onChange={(e) => setTags(e.target.value)}
             placeholder="用逗号分隔多个标签"
-            className="w-full rounded-lg border border-zinc-700/50 bg-zinc-800/50 px-3 py-2 text-sm text-zinc-200 placeholder-zinc-600 outline-none transition-colors focus:border-amber-500/40"
+            className="w-full rounded-lg border border-zinc-200/50 bg-zinc-50/50 px-3 py-2 text-sm text-zinc-800 placeholder-zinc-400 outline-none transition-colors focus:border-sky-400/40"
           />
         </div>
 

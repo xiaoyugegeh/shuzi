@@ -25,12 +25,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3f3f46;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #52525b;
+  background: #a0aec0;
 }
 
 /* 淡入动画 */
@@ -72,6 +72,6 @@
 
 /* 选择框样式 */
 select option {
-  background-color: #18181b;
-  color: #e4e4e7;
+  background-color: #ffffff;
+  color: #18181b;
 }

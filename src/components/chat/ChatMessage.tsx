@@ -49,8 +49,8 @@ export function ChatMessage({ message }: ChatMessageProps) {
       <div
         className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg ${
           isUser
-            ? 'bg-amber-500/15 text-amber-400'
-            : 'bg-zinc-800 text-zinc-400 ring-1 ring-zinc-700/50'
+            ? 'bg-sky-100 text-sky-500'
+            : 'bg-zinc-100 text-zinc-500 ring-1 ring-zinc-200/50'
         }`}
       >
         {isUser ? <User size={14} /> : <Bot size={14} />}
@@ -61,8 +61,8 @@ export function ChatMessage({ message }: ChatMessageProps) {
         <div
           className={`rounded-xl px-4 py-2.5 text-sm leading-relaxed ${
             isUser
-              ? 'bg-amber-500/15 text-amber-200/90'
-              : 'bg-zinc-800/60 text-zinc-300 ring-1 ring-zinc-700/30'
+              ? 'bg-sky-100 text-sky-700'
+              : 'bg-zinc-100/60 text-zinc-700 ring-1 ring-zinc-200/30'
           }`}
         >
           {isUser ? (
@@ -70,7 +70,7 @@ export function ChatMessage({ message }: ChatMessageProps) {
           ) : (
             <div className="whitespace-pre-wrap">
               {renderContent(displayedContent)}
-              {isTyping && <span className="animate-pulse text-amber-400">|</span>}
+              {isTyping && <span className="animate-pulse text-sky-300">|</span>}
             </div>
           )}
         </div>
@@ -95,7 +95,7 @@ function renderContent(content: string): React.ReactNode {
   return parts.map((part, i) => {
     if (part.startsWith('**') && part.endsWith('**')) {
       return (
-        <strong key={i} className="font-semibold text-zinc-100">
+        <strong key={i} className="font-semibold text-zinc-900">
           {part.slice(2, -2)}
         </strong>
       );

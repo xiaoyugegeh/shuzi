@@ -35,7 +35,7 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
   }, [input]);
 
   return (
-    <div className="border-t border-zinc-800/60 bg-zinc-950/50 p-4">
+    <div className="border-t border-zinc-200/60 bg-white/50 p-4">
       <div className="flex gap-2">
         <textarea
           ref={textareaRef}
@@ -45,7 +45,7 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
           placeholder="向 Agent 提问..."
           disabled={disabled}
           rows={1}
-          className="flex-1 resize-none rounded-lg border border-zinc-700/50 bg-zinc-800/50 px-3 py-2.5 text-sm text-zinc-200 placeholder-zinc-600 outline-none transition-colors focus:border-amber-500/40 disabled:opacity-50"
+          className="flex-1 resize-none rounded-lg border border-zinc-200/50 bg-zinc-50/50 px-3 py-2.5 text-sm text-zinc-800 placeholder-zinc-400 outline-none transition-colors focus:border-sky-400/40 disabled:opacity-50"
         />
         <Button
           onClick={handleSubmit}
@@ -56,7 +56,7 @@ export function ChatInput({ onSend, disabled }: ChatInputProps) {
           <SendHorizontal size={16} />
         </Button>
       </div>
-      <p className="mt-2 text-center text-[10px] text-zinc-700">
+      <p className="mt-2 text-center text-[10px] text-zinc-400">
         Agent 基于知识库检索结果生成回答 · Enter 发送 · Shift+Enter 换行
       </p>
     </div>

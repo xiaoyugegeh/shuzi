@@ -39,7 +39,7 @@ export function AssetList() {
   return (
     <div className="flex h-full flex-col">
       {/* 搜索栏 */}
-      <div className="border-b border-zinc-800/60 p-4">
+      <div className="border-b border-zinc-200/60 p-4">
         <SearchBar value={searchQuery} onChange={setSearchQuery} />
 
         {/* 类型筛选 */}
@@ -50,8 +50,8 @@ export function AssetList() {
               onClick={() => setSelectedType(filter.value)}
               className={`rounded-md px-2.5 py-1 text-xs font-medium transition-all ${
                 selectedType === filter.value
-                  ? 'bg-amber-500/15 text-amber-400 ring-1 ring-amber-500/30'
-                  : 'text-zinc-500 hover:bg-zinc-800 hover:text-zinc-300'
+                  ? 'bg-sky-100 text-sky-500 ring-1 ring-sky-400/30'
+                  : 'text-zinc-400 hover:bg-zinc-100 hover:text-zinc-400'
               }`}
             >
               {filter.label}
@@ -65,7 +65,7 @@ export function AssetList() {
             {allTags.slice(0, 10).map((tag) => (
               <Badge
                 key={tag}
-                variant={selectedTags.includes(tag) ? 'amber' : 'outline'}
+                variant={selectedTags.includes(tag) ? 'sky' : 'outline'}
                 onClick={() => toggleTag(tag)}
               >
                 {tag}
@@ -78,14 +78,14 @@ export function AssetList() {
       {/* 资产列表 */}
       <div className="flex-1 overflow-y-auto p-4">
         {filteredAssets.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-12 text-zinc-600">
+          <div className="flex flex-col items-center justify-center py-12 text-zinc-400">
             <FolderOpen size={40} className="mb-3" />
             <p className="text-sm">未找到匹配的知识资产</p>
-            <p className="mt-1 text-xs text-zinc-700">尝试调整搜索条件或新增资产</p>
+            <p className="mt-1 text-xs text-zinc-400">尝试调整搜索条件或新增资产</p>
           </div>
         ) : (
           <div className="space-y-3">
-            <p className="text-[10px] font-medium uppercase tracking-wider text-zinc-600">
+            <p className="text-[10px] font-medium uppercase tracking-wider text-zinc-400">
               {filteredAssets.length} 个资产
             </p>
             {filteredAssets.map((asset, index) => (

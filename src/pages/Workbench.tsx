@@ -10,13 +10,13 @@ export default function Workbench() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return (
-    <div className="flex h-screen flex-col bg-zinc-950 text-zinc-200">
+    <div className="flex h-screen flex-col bg-sky-50 text-zinc-800">
       <Header onAddAsset={() => setShowAssetForm(true)} />
 
       <div className="flex flex-1 overflow-hidden">
         {/* 左侧：知识资产面板 */}
         <div
-          className={`border-r border-zinc-800/60 transition-all duration-300 ${
+          className={`border-r border-zinc-200/60 transition-all duration-300 ${
             sidebarOpen ? 'w-[380px]' : 'w-0'
           }`}
         >
@@ -26,7 +26,7 @@ export default function Workbench() {
         {/* 折叠按钮 */}
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="flex h-full w-6 items-center justify-center border-r border-zinc-800/40 bg-zinc-950/50 text-zinc-600 transition-colors hover:bg-zinc-900 hover:text-zinc-400"
+          className="flex h-full w-6 items-center justify-center border-r border-zinc-200/40 bg-white/50 text-zinc-400 transition-colors hover:bg-sky-100 hover:text-zinc-400"
         >
           {sidebarOpen ? <PanelLeftClose size={14} /> : <PanelLeftOpen size={14} />}
         </button>

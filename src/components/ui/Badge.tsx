@@ -1,6 +1,6 @@
 interface BadgeProps {
   children: React.ReactNode;
-  variant?: 'default' | 'amber' | 'outline';
+  variant?: 'default' | 'sky' | 'outline';
   onClick?: () => void;
   active?: boolean;
 }
@@ -10,10 +10,10 @@ export function Badge({ children, variant = 'default', onClick, active }: BadgeP
 
   const variants = {
     default: active
-      ? 'bg-amber-500/20 text-amber-400 ring-1 ring-amber-500/30'
-      : 'bg-zinc-800 text-zinc-400 ring-1 ring-zinc-700/50 hover:bg-zinc-700/80',
-    amber: 'bg-amber-500/15 text-amber-400 ring-1 ring-amber-500/30',
-    outline: 'bg-transparent text-zinc-400 ring-1 ring-zinc-700/50 hover:bg-zinc-800/50',
+      ? 'bg-sky-400/20 text-sky-400 ring-1 ring-sky-400/30'
+      : 'bg-zinc-100 text-zinc-500 ring-1 ring-zinc-200/50 hover:bg-zinc-200/80',
+    sky: 'bg-sky-100 text-sky-500 ring-1 ring-sky-400/30',
+    outline: 'bg-transparent text-zinc-500 ring-1 ring-zinc-200/50 hover:bg-zinc-50/50',
   };
 
   return (

@@ -11,15 +11,15 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    'inline-flex items-center justify-center rounded-lg font-medium transition-all focus:outline-none focus:ring-2 focus:ring-amber-500/50 disabled:opacity-50 disabled:pointer-events-none';
+    'inline-flex items-center justify-center rounded-lg font-medium transition-all focus:outline-none focus:ring-2 focus:ring-sky-400/50 disabled:opacity-50 disabled:pointer-events-none';
 
   const variants = {
     primary:
-      'bg-amber-500 text-zinc-900 hover:bg-amber-400 shadow-lg shadow-amber-500/20',
+      'bg-sky-400 text-zinc-900 hover:bg-sky-300 shadow-lg shadow-sky-400/20',
     secondary:
-      'bg-zinc-800 text-zinc-200 ring-1 ring-zinc-700/50 hover:bg-zinc-700',
+      'bg-zinc-100 text-zinc-800 ring-1 ring-zinc-200/50 hover:bg-zinc-200',
     ghost:
-      'text-zinc-400 hover:bg-zinc-800 hover:text-zinc-200',
+      'text-zinc-500 hover:bg-zinc-100 hover:text-zinc-800',
   };
 
   const sizes = {
